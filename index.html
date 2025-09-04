@@ -443,7 +443,8 @@
                     },
                     body: JSON.stringify({
                         prompt: message
-                    })
+                    }),
+                    mode: 'cors',
                 });
 
                 const data = await response.json();
@@ -559,7 +560,8 @@
                         to:recipientEmail,
                         subject:emailSubject,
                         message:fullMessage,
-                    })
+                    }),
+                    mode: 'cors',
                 });
 
                 // await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API delay
